@@ -1,0 +1,47 @@
+.fp-slideshow
+{
+    
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box; /* check todo */
+    display: flex;
+}
+
+
+.fp-slideshow-item img
+{
+    width: 100% !important;
+    vertical-align: middle;
+    border-style: none;
+}
+
+
+.fp-slideshow-item
+{
+    position:relative;
+    display:none;
+    align-items: center;
+    width: 100%;
+    transform: scale(1) ;
+    opacity: 0.5;
+    transition: all 2s linear 0.1s;
+}
+
+.fp-slideshow-item.active
+{
+    display: block !important;
+    transform: scale(1.5) ;
+    opacity: 1;
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions */
+/* without this the effect will not show on first time element gets display: block */
+@starting-style {
+    .fp-slideshow-item.active 
+    {
+        transform: scale(1) ;
+        opacity: 0.5;
+        
+    }
+}
+
