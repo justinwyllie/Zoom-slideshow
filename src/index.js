@@ -15,7 +15,7 @@ registerBlockType( 'screen4/zoom-slideshow', {
             <div { ...blockProps }>
                 
                 <InnerBlocks allowedBlocks={['core/image']} />
-                <p>Add jpegs 16:9 with the longest edge approximately 2000px.</p>
+                <p><button>Click to add images</button> (Images should be jpegs 16:9 with the longest edge approximately 2000px).</p>
             </div>
         );
     },
@@ -24,7 +24,7 @@ registerBlockType( 'screen4/zoom-slideshow', {
         const blockProps = useBlockProps.save();
 
         return (
-            <div { ...blockProps }>
+            <div class="fp-slideshow" { ...blockProps }>
                 <InnerBlocks.Content />
             </div>
         );

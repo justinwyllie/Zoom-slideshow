@@ -9,7 +9,7 @@
 }
 
 
-.fp-slideshow-item img
+.fp-slideshow > figure > img
 {
     width: 100% !important;
     vertical-align: middle;
@@ -17,7 +17,9 @@
 }
 
 
-.fp-slideshow-item
+
+
+.fp-slideshow > figure
 {
     position:relative;
     display:none;
@@ -26,9 +28,12 @@
     transform: scale(1) ;
     opacity: 0.5;
     transition: all 2s linear 0.1s;
+    
 }
 
-.fp-slideshow-item.active
+
+
+.fp-slideshow > figure.active
 {
     display: block !important;
     transform: scale(1.5) ;
@@ -37,7 +42,7 @@
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions */
 /* without this the effect will not show on first time element gets display: block */
 @starting-style {
-    .fp-slideshow-item.active 
+    .fp-slideshow > figure.active
     {
         transform: scale(1) ;
         opacity: 0.5;

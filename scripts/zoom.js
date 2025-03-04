@@ -1,11 +1,15 @@
+
+
 jQuery(window).on('load', function() {
 
     var $ = window.jQuery;
+
     var timer;
     var i = 0;
     var runSlideShow = true;
-    var slides = $(".fp-slideshow-item");
+    var slides = $(".fp-slideshow > figure");
     var slidesCount = slides.length;
+    var firstIteration = false;
 
     $(".fp-slideshow").click(function() {
         
@@ -42,10 +46,13 @@ jQuery(window).on('load', function() {
                 i++;
             }
             slides.eq(i).addClass("active");
+
+          
             
         }, 3000)
 
     }
+    
     
     slideShow();
 

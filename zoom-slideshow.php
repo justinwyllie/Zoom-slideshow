@@ -40,7 +40,7 @@ add_action( 'admin_enqueue_scripts', 'add_extension_zoom_slideshow' );
 
 function add_zoom_slideshow_scripts() {
    
-    wp_enqueue_script('zoom-slideshow-js', '/wp-content/plugins/zoom-slideshow//scripts/zoom.js', array('jquery'),
+    wp_enqueue_script('zoom-slideshow-js', '/wp-content/plugins/zoom-slideshow/scripts/zoom.js', array('jquery'),
     wp_get_theme()->get('Version'));
 
     wp_enqueue_style( 'zoom-slideshow-css', '/wp-content/plugins/zoom-slideshow/css/styles.css',    array(), wp_get_theme()->get('Version'));
@@ -52,16 +52,7 @@ add_action( 'wp_enqueue_scripts', 'add_zoom_slideshow_scripts' );
 
 function zoom_slideshow_block_styles() {
 
-    $plugin_css = dirname( __FILE__ ) . '/zoom-slideshow.css';
-    $plugin_url = plugins_url('zoom-slideshow.css', __FILE__);
-    wp_register_style(
-        'zoom-slideshow-style',
-        $plugin_url,
-        array(),
-        filemtime( $plugin_css )
-    );
-    
-    wp_enqueue_style( 'zoom-slideshow-style' );
+   /* there aren't any */
  
  }
  add_action( 'enqueue_block_assets', 'zoom_slideshow_block_styles' );
