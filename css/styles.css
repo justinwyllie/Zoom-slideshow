@@ -39,6 +39,9 @@
     transform: scale(1.5) ;
     opacity: 1;
 }
+
+
+
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions */
 /* without this the effect will not show on first time element gets display: block */
 @starting-style {

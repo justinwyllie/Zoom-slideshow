@@ -24,7 +24,7 @@ registerBlockType( 'screen4/zoom-slideshow', {
         const blockProps = useBlockProps.save();
 
         return (
-            <div class="fp-slideshow" { ...blockProps }>
+            <div className="fp-slideshow" { ...blockProps }>
                 <InnerBlocks.Content />
             </div>
         );
